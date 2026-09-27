@@ -57,10 +57,10 @@ body{background:linear-gradient(180deg,#eef8f8 0,#f7fafb 42%,#f5f8f9 100%)}
 .dest small{font-size:12px;padding-bottom:14px;opacity:.95}
 .dest:nth-child(1){background-image:url('https://images.unsplash.com/photo-1512343879784-a960c7d9f7b6?auto=format&fit=crop&w=700&q=82')}
 .dest:nth-child(2){background-image:url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=700&q=82')}
-.dest:nth-child(3){background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=700&q=82')}
+.dest:nth-child(3){background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=82')}
 .dest:nth-child(4){background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=700&q=82')}
 .dest:nth-child(5){background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=82')}
-.dest:nth-child(6){background-image:url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=700&q=82')}
+.dest:nth-child(6){background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=82')}
 .links .partner{border:1px solid #e1e9eb!important;border-radius:17px;padding:14px 15px!important;background:linear-gradient(135deg,#fff,#f8fbfb)}
 .total{border-radius:16px!important;background:linear-gradient(135deg,#e8f8f7,#fff)!important;border:1px solid #d5eceb}
 .note{border-radius:14px!important}
@@ -84,6 +84,21 @@ body{background:linear-gradient(180deg,#eef8f8 0,#f7fafb 42%,#f5f8f9 100%)}
   .hero h1{font-size:36px}
   .destgrid{grid-template-columns:1fr 1fr}
 }
+
+
+/* TripEase Professional V3 */
+.hero{min-height:430px}
+.hero h1{max-width:560px}
+.hero .search input{font-size:16px}
+.quick-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.quick-trust div{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:10px 7px;text-align:center;font-size:11px}
+.quick-trust strong{display:block;font-size:15px;color:#fff}
+.section-intro{color:#6d7d84;font-size:13px;margin:-8px 0 14px;line-height:1.45}
+.guide-list{display:grid!important;grid-template-columns:repeat(2,1fr);gap:10px}
+.guide-list a,.guide-list button{min-height:70px!important;border-radius:16px!important;background:#fff!important;border:1px solid #e1e9eb!important;box-shadow:0 8px 22px rgba(18,48,58,.06)!important;padding:12px!important;text-align:left!important;font-weight:800!important;color:#12303a!important}
+.guide-list a:after,.guide-list button:after{content:"  ›";float:right;color:#087f8c}
+.booking-note{font-size:11px;color:#7b8a90;margin-top:10px}
+@media(max-width:380px){.quick-trust{grid-template-columns:1fr 1fr 1fr}.quick-trust div{font-size:10px}.guide-list{grid-template-columns:1fr 1fr}}
 
 </style><style>
 #guideModal{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,27,32,.65);padding:16px;overflow:auto}
@@ -112,7 +127,7 @@ body{background:linear-gradient(180deg,#eef8f8 0,#f7fafb 42%,#f5f8f9 100%)}
     </div>
   </div>
 </section>
-<section class="section"><h2>🔥 Popular destinations</h2><div class="chips">
+<section class="section"><h2>🔥 Popular destinations</h2><p class="section-intro">Start with a popular escape, then build your itinerary, budget and packing list in one place.</p><div class="chips">
 <button class="chip" onclick="choose('Goa')">Goa</button><button class="chip" onclick="choose('Lakshadweep')">Lakshadweep</button><button class="chip" onclick="choose('Kerala')">Kerala</button><button class="chip" onclick="choose('Thailand')">Thailand</button><button class="chip" onclick="choose('Vietnam')">Vietnam</button><button class="chip" onclick="choose('Switzerland')">Switzerland</button></div></section>
 <section class="section" id="destinations"><div class="destgrid">
 <div class="dest" onclick="choose('Goa')"><b>Goa</b><small>Beaches · food · sunsets</small></div><div class="dest" onclick="choose('Kerala')"><b>Kerala</b><small>Backwaters · nature</small></div>
@@ -124,7 +139,7 @@ body{background:linear-gradient(180deg,#eef8f8 0,#f7fafb 42%,#f5f8f9 100%)}
 <div class="partner"><span>✈️ Flights<small>Replace with your flight affiliate link</small></span><button onclick="affiliate('flight')">Find flights</button></div>
 <div class="partner"><span>🎟️ Activities<small>Replace with your tours affiliate link</small></span><button onclick="affiliate('activity')">Find activities</button></div>
 <div class="partner"><span>🚗 Transfers<small>Replace with your transfer affiliate link</small></span><button onclick="affiliate('transfer')">Find transfers</button></div>
-<div class="note">Affiliate buttons are placeholders. Add your approved partner URLs before publishing.</div>
+<div class="note">Booking buttons are ready for your approved partner links. Add affiliate URLs when you are ready to monetize.</div>
 </div></section>
 <section class="section" id="budget"><h2>💰 Budget calculator</h2><div class="card"><div class="budget">
 <div class="field"><label>Flights</label><input id="f" type="number" value="0"/></div><div class="field"><label>Hotels</label><input id="h" type="number" value="0"/></div>
@@ -144,6 +159,15 @@ body{background:linear-gradient(180deg,#eef8f8 0,#f7fafb 42%,#f5f8f9 100%)}
 <p class="muted">TripEase helps travellers plan practical trips with destination guides, sample itineraries, estimated budgets and packing checklists. Start with popular Indian destinations or explore international trips.</p>
 <p class="muted">Planning estimates are provided for guidance only. Prices, schedules, entry rules and weather can change, so verify current information before booking.</p>
 </div></section><footer>TripEase © 2026 · Independent travel planning website · Built for smarter trips</footer>
+
+<section class="section" style="padding-bottom:28px">
+  <div class="card" style="padding:20px;text-align:center;background:linear-gradient(135deg,#12303a,#087f8c);color:#fff">
+    <div style="font-size:28px">✈️</div>
+    <h2 style="margin:7px 0;color:#fff">Your next trip starts here.</h2>
+    <p style="margin:0 0 14px;color:#dff7f6;font-size:13px">Plan your days, estimate your spend and pack with confidence.</p>
+    <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="background:#fff;color:#12303a">Plan a trip</button>
+  </div>
+</section>
 </main>
 <nav class="bottom"><a class="active" href="#plan"><span>🗺️</span>Plan</a><a href="#guides"><span>📚</span>Guides</a><a href="#booking"><span>🏨</span>Book</a><a href="#budget"><span>💰</span>Budget</a><a href="#packing"><span>🎒</span>Pack</a></nav>
 </div>
